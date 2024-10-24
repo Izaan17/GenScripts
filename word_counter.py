@@ -9,7 +9,6 @@ def is_word(text: str):
             return True
     return False
 
-
 def get_word_count_and_characters(text: str) -> [int, int]:
     char_count = len(text.replace('\n', ''))
     text = " ".join(text.split())
