@@ -1,9 +1,7 @@
 # General Purpose Scripts Made in Python
-___
 Description
 
 ## Table of Contents
-___
 - [Installation](#-installation)
 - [Scripts](#-scripts)
 
