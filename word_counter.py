@@ -3,11 +3,13 @@ import string
 
 CHARS = string.ascii_letters + string.digits
 
+
 def is_word(text: str):
     for char in text:
         if char in CHARS:
             return True
     return False
+
 
 def get_word_count_and_characters(text: str) -> [int, int]:
     char_count = len(text.replace('\n', ''))
@@ -21,6 +23,7 @@ def get_word_count_and_characters(text: str) -> [int, int]:
 
     return word_count, char_count
 
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description='gather file name to count words'
@@ -29,6 +32,7 @@ def parse_args():
 
     return parser.parse_args()
 
+
 def main():
     args = parse_args()
     if args.file:
@@ -36,8 +40,9 @@ def main():
         with file as file_handler:
             word_count, char_count = get_word_count_and_characters(file_handler.read())
             print(f'File: {file.name}\n'
-                  f'Words: {word_count}\n' 
+                  f'Words: {word_count}\n'
                   f'Character Count: {char_count}\n')
+
 
 if __name__ == '__main__':
     main()

@@ -1,6 +1,7 @@
 import time
 import argparse
 
+
 def timer(amount: int, name: str = ''):
     start_time = time.time()
     current_time = 0
@@ -21,6 +22,7 @@ def timer(amount: int, name: str = ''):
         pass
     print()
 
+
 def t_time(string: str):
     if 's' in string:
         return float(string[:string.find('s')])
@@ -35,6 +37,7 @@ def t_time(string: str):
     else:
         raise argparse.ArgumentTypeError('Please enter a number or time type.')
 
+
 def parse_args():
     parser = argparse.ArgumentParser(description='Simple Timer')
     parser.add_argument('time', type=t_time, default=60, const=1, nargs='?',
@@ -43,9 +46,11 @@ def parse_args():
 
     return parser.parse_args()
 
+
 def main():
     args = parse_args()
     timer(int(args.time), args.name)
+
 
 if __name__ == '__main__':
     main()

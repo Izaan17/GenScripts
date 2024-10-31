@@ -2,6 +2,7 @@ import argparse
 import hashlib
 import os.path
 
+
 def hash_file(file_path):
     hasher = hashlib.sha256()
     with open(file_path, 'rb') as file:
@@ -10,6 +11,7 @@ def hash_file(file_path):
 
     return hasher.hexdigest()
 
+
 def process_files(files, hashes):
     # Shared logic for processing files and detecting duplicates
     for file_path in files:
@@ -17,6 +19,7 @@ def process_files(files, hashes):
         if file_hash in hashes:
             print(f'Duplicate: {file_path} | {hashes[file_hash]}')
         hashes[file_hash] = file_path
+
 
 def gather_files(directory, is_recursive):
     if is_recursive:
@@ -31,12 +34,14 @@ def gather_files(directory, is_recursive):
             if os.path.isfile(file_path):
                 yield file_path  # Return each file's full path
 
+
 # Type for argparse to know if it's a directory
 def t_directory(string: str):
     if os.path.isdir(string):
         return string
 
-    raise argparse.ArgumentTypeError(f"readable_dir:{string} is not a valid directory.")
+    raise argparse.ArgumentTypeError(f"{string} is not a valid directory.")
+
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -44,9 +49,11 @@ def parse_args():
     )
     parser.add_argument('directory', type=t_directory, default=os.getcwd(), nargs='?', const=1,
                         help='Directory to scan')
-    parser.add_argument('-r', '--recursive', action='store_true', help='Checks all folders in the directory recursively')
+    parser.add_argument('-r', '--recursive', action='store_true',
+                        help='Checks all folders in the directory recursively')
 
     return parser.parse_args()
+
 
 def main():
     args = parse_args()
@@ -62,6 +69,7 @@ def main():
         print(f'[error] {error}')
     except KeyboardInterrupt:
         pass
+
 
 if __name__ == '__main__':
     main()
