@@ -28,7 +28,7 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description='gather file name to count words'
     )
-    parser.add_argument('file', metavar='str', type=argparse.FileType('r'), help='Filename to count words')
+    parser.add_argument('file', type=argparse.FileType('r'), help='Filename to count words')
 
     return parser.parse_args()
 
