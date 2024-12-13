@@ -20,5 +20,8 @@ pip install -r requirements.txt
 | Script Name                                         | Description                                                           |
 |-----------------------------------------------------|-----------------------------------------------------------------------|
 | [Duplicate File Checker](duplicate_file_checker.py) | Checks folders for duplicate files using sha256 hashing.              |
+| [IJ](ij.py)                                         | Allows for IntelliJ to be opened anytime in the terminal.             |
 | [Timer](timer.py)                                   | Creates a timer.                                                      |
 | [Word Counter](word_counter.py)                     | Get details of files such as how many words and characters in a file. |
+| [Web](web.py)                                       | Allows for quick web searches in the terminal.                        |
+
