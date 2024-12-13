@@ -1,5 +1,5 @@
-# General Purpose Scripts Made in Python
-A collection of versatile Python scripts designed to simplify everyday tasks. Made for CMDBaker but can be used reguarly.
+# 🐍 General Purpose Python Scripts
+A collection of versatile Python scripts designed to simplify everyday tasks. Made for CMDBaker but can be used without it.
 
 ## Table of Contents
 - [Installation](#-installation)
