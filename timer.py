@@ -41,7 +41,7 @@ def t_time(string: str):
 def parse_args():
     parser = argparse.ArgumentParser(description='Simple Timer')
     parser.add_argument('time', type=t_time, default=60, const=1, nargs='?',
-                        help='Amount of time to count')
+                        help='Amount of time to count (defaults to 10)')
     parser.add_argument('-n', '--name', type=str, default='Timer')
 
     return parser.parse_args()
