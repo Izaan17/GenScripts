@@ -1,13 +1,13 @@
 # General Purpose Scripts Made in Python
-Description
+A collection of versatile Python scripts designed to simplify everyday tasks. Made for CMDBaker but can be used reguarly.
 
 ## Table of Contents
 - [Installation](#-installation)
-- [Scripts](#-scripts)
+- [Scripts](#-scripts-overview)
 
 
 ## ⚙️ Installation
-1. Clone the repo:
+1. Clone the repository:
 ```bash
 git clone https://github.com/Izaan17/GenScripts.git
 ```
@@ -16,7 +16,7 @@ git clone https://github.com/Izaan17/GenScripts.git
 pip install -r requirements.txt
 ```
 
-## 📃 Scripts
+## 📃 Scripts Overview
 | Script Name                                         | Description                                                           |
 |-----------------------------------------------------|-----------------------------------------------------------------------|
 | [Duplicate File Checker](duplicate_file_checker.py) | Checks folders for duplicate files using sha256 hashing.              |
