@@ -17,7 +17,10 @@ def process_files(files, hashes):
     for file_path in files:
         file_hash = hash_file(file_path)
         if file_hash in hashes:
-            print(f'Duplicate: {file_path} | {hashes[file_hash]}')
+            print(f'[{file_hash}]')
+            print(file_path)
+            print(hashes[file_hash])
+            print()
         hashes[file_hash] = file_path
 
 
